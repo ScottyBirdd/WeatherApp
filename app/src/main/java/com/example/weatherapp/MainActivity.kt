@@ -7,6 +7,8 @@ import androidx.activity.enableEdgeToEdge
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material3.Scaffold
 import androidx.compose.ui.Modifier
+import com.example.weatherapp.navigation.Navigation
+import com.example.weatherapp.ui.screens.DailyScreen
 import com.example.weatherapp.ui.theme.WeatherAppTheme
 
 
@@ -16,7 +18,7 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             WeatherAppTheme {
-
+                    Navigation()
                 }
             }
         }
