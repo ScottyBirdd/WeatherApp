@@ -7,5 +7,4 @@ import androidx.compose.runtime.Composable
 @Composable
 fun DailyScreen() {
     Text("Daily Screen!")
-
 }
