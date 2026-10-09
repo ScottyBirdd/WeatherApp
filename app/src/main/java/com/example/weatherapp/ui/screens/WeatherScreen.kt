@@ -29,11 +29,6 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
 import com.example.weatherapp.R
 
-
-
-
-
-
 @Composable
 fun WeatherScreen() {
     // placeholder data for weather
