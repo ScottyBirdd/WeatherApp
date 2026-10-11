@@ -2,7 +2,8 @@ package com.example.weatherapp.navigation
 
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.Search
+import androidx.compose.material.icons.filled.CalendarMonth
+import androidx.compose.material.icons.filled.Today
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
@@ -51,7 +52,7 @@ fun Navigation() {
                 windowInsets = NavigationBarDefaults.windowInsets)
             {
                 NavigationBarItem(
-                    icon = { Icon(imageVector = Icons.Default.Search, contentDescription = "Search") },
+                    icon = { Icon(imageVector = Icons.Default.Today, contentDescription = "Daily") },
                     label = { Text("Daily Forecast") },
                     selected = selectedIndex == 0,
                     onClick = {selectedIndex = 0
@@ -64,7 +65,7 @@ fun Navigation() {
                         }}
                 )
                 NavigationBarItem(
-                    icon = { Icon(imageVector = Icons.Default.Search, contentDescription = "Search") },
+                    icon = { Icon(imageVector = Icons.Default.CalendarMonth, contentDescription = "Weekly") },
                     label = { Text("Weekly Forecast") },
                     selected = selectedIndex == 1,
                     onClick = {selectedIndex = 1
