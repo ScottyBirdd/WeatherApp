@@ -10,18 +10,23 @@ import com.example.weatherapp.MainViewModel
 fun DailyScreen(viewModel: MainViewModel = viewModel()) {
 
     val weather = viewModel.weather
+    val location = viewModel.location
 
     viewModel.searchWeather(
         query = "Halifax, Canada"
     )
 
     weather?.let {
-
         Column {
-
             Text(it.location.cityLocation)
 
             Text("${it.current.tempCelsius}°C")
+
+            location?.let {
+                Text("Latitude: ${location.latitude}")
+                Text("Longitude: ${location.longitude}")
+            }
         }
     }
+
 }

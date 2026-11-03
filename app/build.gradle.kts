@@ -51,6 +51,8 @@ dependencies {
     // Icons (for the nav menu buttons)
     implementation(libs.androidx.compose.material.icons.core)
     implementation(libs.androidx.compose.material.icons.extended)
+    // Location services
+    implementation("com.google.android.gms:play-services-location:21.4.0")
 
     testImplementation(libs.junit)
     androidTestImplementation(platform(libs.androidx.compose.bom))
