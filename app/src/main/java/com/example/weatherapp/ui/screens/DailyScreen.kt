@@ -18,9 +18,22 @@ fun DailyScreen(viewModel: MainViewModel = viewModel()) {
 
     weather?.let {
         Column {
+
             Text(it.location.cityLocation)
 
+            Text(it.current.condition.text)
+
             Text("${it.current.tempCelsius}°C")
+
+            Text("Feels Like: ${it.current.feelsLike}°C")
+
+            Text("Wind: ${it.current.windDirection} ${it.current.windSpeed} km/h")
+
+            Text(  "Humidity: ${it.current.humidity}%")
+
+            Text("Precipitation: ${it.current.precipitationAmount} mm")
+
+
 
             location?.let {
                 Text("Latitude: ${location.latitude}")

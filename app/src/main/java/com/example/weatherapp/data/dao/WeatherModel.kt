@@ -8,7 +8,23 @@ data class WeatherModel(
     val forecast: Forecast
 )
 data class Current(
-    @SerializedName("temp_c") val tempCelsius: Float
+    @SerializedName("temp_c") val tempCelsius: Float,
+
+    @SerializedName("feelslike_c") val feelsLike: Float,
+
+    @SerializedName("wind_kph") val windSpeed: Float,
+
+    @SerializedName("wind_dir") val windDirection: String,
+
+    val humidity: Int,
+
+    @SerializedName("chance_of_rain") val precipitationAmount: Float,
+
+    val condition: Condition
+)
+data class Condition(
+    val text: String,
+    val icon: String
 )
 data class Location(
     @SerializedName("name") val cityLocation: String
