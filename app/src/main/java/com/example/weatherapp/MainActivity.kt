@@ -1,6 +1,6 @@
 /*
     Scott Fahie - W0516602
-    MOBI3002 - Weather App Phase 1
+    MOBI3002 - Weather App Phase 2
     This program was written with assistance from:
     https://developer.android.com/studio/write/create-app-icons
     https://ktdevlog.com/build-a-weather-app-in-kotlin/
