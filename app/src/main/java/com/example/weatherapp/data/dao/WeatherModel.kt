@@ -18,16 +18,21 @@ data class Current(
 
     val humidity: Int,
 
-    @SerializedName("chance_of_rain") val precipitationAmount: Float,
+    @SerializedName("precip_mm") val precipitationAmount: Float,
 
-    val condition: Condition
+    @SerializedName("chance_of_rain") val chanceOfRain: Float,
+
+    val condition: Condition,
+
 )
 data class Condition(
     val text: String,
     val icon: String
 )
 data class Location(
-    @SerializedName("name") val cityLocation: String
+    @SerializedName("name") val cityLocation: String,
+    val region: String,
+    val country: String
 )
 
 data class Forecast(
@@ -35,5 +40,23 @@ data class Forecast(
 )
 
 data class ForecastDay(
-    val date: String
+    val date: String,
+    val day: Day
+)
+
+data class Day(
+
+    @SerializedName("maxtemp_c") val maxTemp: Float,
+
+    @SerializedName("mintemp_c") val minTemp: Float,
+
+    @SerializedName("maxwind_kph") val maxWind: Float,
+
+    @SerializedName("totalprecip_mm") val precipitationAmount: Float,
+
+    @SerializedName("daily_chance_of_rain") val chanceOfRain: Int,
+
+    @SerializedName("avghumidity") val humidity: Int,
+
+    val condition: Condition
 )

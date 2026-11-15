@@ -70,8 +70,11 @@ fun Navigation() {
                     titleContentColor = MaterialTheme.colorScheme.primary,
                 ),
                 title = {
-                    Text("The Weather Centre")
+                    Text(
+                        "${viewModel.weather?.location?.cityLocation ?: "Fetching Device Location..."}, ${viewModel.weather?.location?.region ?: ""}"
+                    )
                 }
+
             )
         },
         bottomBar = {
@@ -118,7 +121,7 @@ fun Navigation() {
                 DailyScreen(viewModel)
             }
             composable(route = "Weekly Forecast") {
-                WeatherScreen()
+                WeatherScreen(viewModel)
             }
         }
         Text("",modifier = Modifier.padding(paddingValues = innerPadding))
